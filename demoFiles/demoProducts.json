@@ -1,0 +1,28 @@
+{
+    "products":[
+        {
+            "id": "FlintX-1",
+            "status": "ACTIVE",
+            "type": "VARIANT",
+            "name": "Name for FlintX Product-1",
+            "summary": "Summary for FlintX Product-1",
+            "parentProduct": "FLINTX_SPRD",
+            "categories": [
+              "FLINTX"
+            ],
+            "gtin": "123456789"
+        },
+        {
+            "id": "FlintX-2",
+            "status": "ACTIVE",
+            "type": "VARIANT",
+            "name": "Name for FlintX Product-2",
+            "summary": "Summary for FlintX Product-2",
+            "parentProduct": "FLINTX_SPRD",
+            "categories": [
+              "FLINTX"
+            ],
+            "gtin": "123456789"
+        }
+    ]
+}
