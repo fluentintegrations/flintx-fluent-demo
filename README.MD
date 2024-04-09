@@ -54,16 +54,18 @@
 
 ## Part II:
 ### Prerequisites:
+- FlintX Core & Product Domain Services
 - Apache Kafka
-- see above
+- Docker
+- JDK 17+, Maven 3.8+, IDE (e.g. IntelliJ)
 
 1. Add required Camel Quarkus extensions
-   - camel-quarkus-google-storage <br>
+   - camel-quarkus-kafka <br>
    `./mvnw quarkus:add-extension -Dextensions="org.apache.camel.quarkus:camel-quarkus-kafka"`
-2. Create Kafka Topics 
+2. Create Kafka topics 
    `./bin/kafka-topics.sh --create --topic event --bootstrap-server localhost:9092
    `./bin/kafka-topics.sh --create --topic eventVerification --bootstrap-server localhost:9092`
 3. Start Kafka consumer
    `kafka-console-consumer.sh --topic eventVerification --from-beginning --bootstrap-server localhost:9092`
-4. Send demo products 
+4. Send demo products to Kafka topic
    `jq -rc . demoProducts.json | kafka-console-producer.sh --topic event --bootstrap-server localhost:9092`
